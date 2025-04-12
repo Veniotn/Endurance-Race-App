@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Endurance Race App/App.axaml" value="Endurance Race App/Endurance Race App.csproj" />
+        <entry key="PitStopApp/App.axaml" value="PitStopApp/PitStopApp.csproj" />
+        <entry key="PitStopApp/MainWindow.axaml" value="PitStopApp/PitStopApp.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
