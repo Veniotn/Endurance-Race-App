@@ -15,16 +15,42 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <StackPanel Orientation="Vertical">
+    <Viewbox>
+        <!--Main Window -->
+        <StackPanel  Name="MainPanel" Orientation="Vertical">
+             
+            <!--Info windows -->
+            <StackPanel Name="InfoPanel"  Orientation="Horizontal">
                 
-        <TextBlock Text="LapTimes"/>
-        <Border Classes="infoBorder">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="LapTime: "/>
-                <TextBlock Text="1:30.4245"/>
-            </StackPanel>
+                <StackPanel Name="LapTimesPanel" Orientation="Vertical">
+                    
+                    <TextBlock Text="{Binding LapTimesText}"/>
+                    <Button Name="getLapTime" Content="Get lap time" Click="GetLapTime_OnClick"/>
+                    <Border Classes="LapTimeBorder">
+                        <StackPanel Name="currenLapTimePanel" Orientation="Horizontal">
+                            <TextBlock Text="{Binding CurrentLapTimeText}"/>
+                            <TextBlock Name="LapTimeText" Text="1:30.4245"/>
+                        </StackPanel>
+                    </Border> 
+                    <Border Classes="LapTimeBorder">
+                        <StackPanel Name="bestLapTimePanel" Orientation="Horizontal">
+                            <TextBlock Text="{Binding CurrentLapTimeText}"/>
+                            <TextBlock Text="1:30.4245"/>
+                        </StackPanel>
+                    </Border>
+                    
+                </StackPanel>
+                <!--End Lap times -->
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{Binding LapHistoryText}"/>
+                    <Border Classes="LapHistoryBorder">
                         
-        </Border>
-    </StackPanel>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            <!--End Info windows -->
+        </StackPanel>
+        <!--End Main Window -->
+    </Viewbox>
 
 </Window>
